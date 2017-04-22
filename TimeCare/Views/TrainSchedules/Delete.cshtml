@@ -1,0 +1,96 @@
+﻿@model TimeCare.Models.TrainSchedule
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TrainSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PassName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReminderDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReminderDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainScheduleTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrainScheduleTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChangeoverTimeBefore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChangeoverTimeBefore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChangeoverTimeAfter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChangeoverTimeAfter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrainType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

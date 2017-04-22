@@ -1,0 +1,77 @@
+﻿@model IEnumerable<TimeCare.Models.TrainSchedule>
+
+@{
+    ViewBag.Title = "Train Schedule";
+}
+
+<h3>@ViewBag.Title</h3>
+
+<p>
+    @Html.ActionLink("Create New pass", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PassName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReminderDuration)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.ChangeoverTimeBefore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChangeoverTimeAfter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReminderDuration)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.ChangeoverTimeBefore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChangeoverTimeAfter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TrainScheduleId }) |
+           @* @Html.ActionLink("Details", "Details", new { id=item.TrainScheduleId }) |*@
+            @Html.ActionLink("Delete", "Delete", new { id=item.TrainScheduleId })
+        </td>
+    </tr>
+}
+
+</table>
